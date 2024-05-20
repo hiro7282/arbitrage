@@ -1,0 +1,24 @@
+{
+  "appenders": {
+    "debug": { "type": "file", "filename": "debug.log" },
+    "result_raw": { "type": "file", "filename": "result.log" },
+    "result": { "type": "logLevelFilter", "appender": "result_raw", "level": "info" },
+    "bit": {"type": "file", "filename": "log/bit.log", "pattern": "yyyyMMdd-hh", "alwaysIncludePattern": true, "backups": 10000},
+    "liq": {"type": "file", "filename": "log/liq.log", "pattern": "yyyyMMdd-hh", "alwaysIncludePattern": true, "backups": 10000},
+    "pol": {"type": "file", "filename": "log/pol.log", "pattern": "yyyyMMdd-hh", "alwaysIncludePattern": true, "backups": 10000},
+    "bin": {"type": "file", "filename": "log/bin.log", "pattern": "yyyyMMdd-hh", "alwaysIncludePattern": true, "backups": 10000},
+    "huo": {"type": "file", "filename": "log/huo.log", "pattern": "yyyyMMdd-hh", "alwaysIncludePattern": true, "backups": 10000},
+    "uma": {"type": "file", "filename": "log/uma.log", "pattern": "yyyyMMdd-hh", "alwaysIncludePattern": true, "backups": 10000},
+    "order": {"type": "file", "filename": "log/order.log", "pattern": "yyyyMMdd-hh", "alwaysIncludePattern": true, "backups": 10000}
+  },
+  "categories": {
+   "bit": { "appenders": ["bit"], "level": "debug" },
+   "liq": { "appenders": ["liq"], "level": "debug" },
+   "pol": { "appenders": ["pol"], "level": "debug" },
+   "bin": { "appenders": ["bin"], "level": "debug" },
+   "huo": { "appenders": ["huo"], "level": "debug" },
+   "uma": { "appenders": ["uma"], "level": "debug" },
+   "order": { "appenders": ["order"], "level": "debug" },
+   "default": {"appenders": ["debug"], "level": "debug"}
+  }
+}
